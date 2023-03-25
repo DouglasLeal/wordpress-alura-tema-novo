@@ -10,7 +10,14 @@
 </head>
 <body <?php body_class(); ?>>
 <header class="site-header">
+    <?php
+    the_custom_logo();
 
+    wp_nav_menu([
+        'menu' => 'menu-navegacao',
+        'menu_id' => 'menu-principal'
+    ])
+    ?>
 </header>
 
 
