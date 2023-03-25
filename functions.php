@@ -26,3 +26,11 @@ function ai_post_customizado(){
     ]);
 }
 add_action('after_setup_theme', 'ai_post_customizado');
+
+function ai_registrando_taxonomia(){
+        register_taxonomy('paises', 'destinos', [
+            'labels' => ['name' => 'Países'],
+            'hierarchical' => true
+        ]);
+}
+add_action('after_setup_theme', 'ai_registrando_taxonomia');
